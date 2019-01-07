@@ -1,0 +1,70 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import scipy.signal as signal
+import numpy as np
+class SpO2():
+    def __init__(self,file):
+        '''This will take location as the input and read the .csv file'''
+        self.file = pd.read_csv(file,sep=',')
+
+    def data_extraction(self):
+        '''This will extract the Red and IR values and
+        return them within the given range'''
+        x1 = self.file['CH1']
+        x2 = self.file['CH2']
+        X1=x1[0:40000]
+        X2=x2[0:40000]
+        return X1,X2
+
+    def plotting(self,x,y,f):
+        '''This will plot the given values'''
+        plt.figure(f)
+        plt.subplot(211)
+        plt.plot(x)
+        plt.title('RED')
+        plt.xlabel('Samples')
+        plt.ylabel('Voltage(v)')
+        plt.subplot(212)
+        plt.plot(y)
+        plt.title('IR')
+        plt.xlabel('Samples')
+        plt.ylabel('Voltage(v)')
+        plt.tight_layout()
+        plt.show()
+
+    def filter(self,p,q):
+        '''This will filter the given signal and is low pass filter'''
+        b, a = signal.butter(4, 0.018, 'low')
+        z1 = signal.filtfilt(b, a, p)
+        z2 = signal.filtfilt(b, a, q)
+        return z1,z2
+
+    def range(self,m,n):
+        '''This is for taking the values within one cycle in the total signal'''
+        V1=int(input("Enter the starting of the signal: "))
+        V2 = V1 + 730
+        V3 = V2 + 50
+        V4 = V3 + 730
+        Z1 = m[V1:V2]
+        Z2 = n[V3:V4]
+        return Z1,Z2
+
+    def cal(self,s,t):
+        '''This is for calcutating the SpO2 values'''
+        RED = np.sqrt(np.mean(s ** 2))
+        IR = np.sqrt(np.mean(t ** 2))
+        R = RED / IR
+        print(R)
+        S = 110 - (25 * R)
+        print(S)
+        SpO2 = round(S)
+        print(SpO2)
+
+A=SpO2("C:\\Users\\Sainath\\Desktop\\sp1.csv")
+c,d=A.data_extraction()
+A.plotting(c,d,1)
+h,i = A.filter(c,d)
+j,k = A.range(h,i)
+A.plotting(j,k,2)
+A.cal(j,k)
+

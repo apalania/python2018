@@ -1,0 +1,33 @@
+                                    Overall HTC
+									Liquid-liquid media
+             
+shell side                                   tube side                          design Ud     includes total dirt  
+       
+
+Aroclor1248                                   Jet fuels                        100-150        0.0015
+Cutback asphalt                               Water                            010-020        0.0100
+Demineralised water                           Water                            300-500        0.0010 
+Ethanol amine(MEA or DEA)10-25% solution      Water or DEA or MEA  solutions   140-200        0.0030     
+Fuel oil                                      Water                            015-025        0.0070
+Fuel oil                                      Oil                              010-015        0.0080
+Gasoline                                      Water                            060-100        0.0030
+Heavy oils                                    Heavy oils                       010-040        0.0040
+Heavy oils                                    Water                            015-050        0.0050
+Hydrogen-rich reformer stream                 Hydrogen-rich reformer stream    090-120        0.0020       
+Kerosene or gas oil                           Water                            025-050        0.0050
+Kerosene or gas oil                           Oil                              020-035        0.0050
+Kerosene or jet fuels                         Trichlorethylene                 040-050        0.0015
+Jacket water                                  Water                            230-300        0.0020
+Lube oil(low viscosity)                       Water                            025-050        0.0020
+Lube oil (high viscosity)                     Water                            040-080        0.0030
+Lube oil                                      Oil                              011-020        0.0060
+Naphtha                                       Water                            050-070        0.0050
+Naphtha                                       Oil                              025-035        0.0050
+Organic solvents                              Water                            050-150        0.0030
+Organic solvents                              Brine                            035-090        0.0030
+Organic solvents                              Organic solvents                 020-060        0.0020
+Tall oil derivatives,vegetable oil,etc.       Water                            020-050        0.0040
+Water                                         Caustic soda solutions(10-30%)   100-250        0.0030            
+Water                                         Water                            200-250        0.0030
+Wax distillate                                Water                            015-025        0.0050
+Wax distillate                                Oil                              013-023        0.0050
