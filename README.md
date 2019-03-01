@@ -1,4 +1,4 @@
 # python2018
-Projects in the Python Programming class 2018
+Projects in the Python Programming class (2018), School of Chemical and BioTechnology, SASTRA Deemed University, INDIA.
 
-All codes are copyright student authors noted in the respective project folders.
+Copyright Ashok Palaniappan and respective student authors.
